@@ -1,2 +1,23 @@
 <!-- Beta Power placeholder -->
-
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Beta Power Feed</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="profile">
+        <p>User: {{ user.google_name }} | Family Reputation: {{ user.reputation.family }}</p>
+    </div>
+    <div class="video">
+        <img src="{{ video.thumbnail }}">
+        <h3>{{ video.title }}</h3>
+        <select class="beta-vote" onchange="voteAge('{{ video.id }}', this.value)">
+            <option value="all">All Ages</option>
+            <option value="13+">13+</option>
+            <option value="18+">18+</option>
+        </select>
+    </div>
+    <script src="dao.js"></script>
+</body>
+</html>

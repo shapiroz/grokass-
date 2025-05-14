@@ -1,2 +1,17 @@
 /* Beta Power placeholder */
-
+/* Styling for Beta Power feed */
+body {
+    font-family: Arial, sans-serif;
+}
+.video {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+.beta-vote {
+    margin-top: 5px;
+}
+#profile {
+    padding: 10px;
+    background: #f0f0f0;
+}
