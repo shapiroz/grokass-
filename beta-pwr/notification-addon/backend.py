@@ -1,15 +1,16 @@
-# Beta Power placeholder
 # Backend for YouTube API integration and ad tagging
 import googleapiclient.discovery
+import json
 
-youtube = googleapiclient.discovery.build("youtube", "v3", developerKey="YOUR_API_KEY")
+# Load API key
+with open("../config.json", "r") as f:
+    config = json.load(f)
+youtube = googleapiclient.discovery.build("youtube", "v3", developerKey=config["youtube_api_key"])
 
 def fetch_videos():
-    # Fetch recent videos (placeholder)
     request = youtube.videos().list(part="snippet", chart="mostPopular", maxResults=10)
     response = request.execute()
     return response["items"]
 
 def tag_ad(video_id):
-    # Tag ad content (placeholder)
     return {"video_id": video_id, "is_ad": False}
